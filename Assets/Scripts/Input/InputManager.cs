@@ -25,6 +25,7 @@ public class InputManager : MonoBehaviour
 
     private void RotateInput()
     {
+        
         input.RotateHorizontal = rotateJoystick.Horizontal;
         input.RotateVertical = rotateJoystick.Vertical;
         input.RotateDirection = new Vector3(input.RotateHorizontal, 0, input.RotateVertical);

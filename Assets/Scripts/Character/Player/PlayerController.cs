@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runSpeed = 12f;
     [SerializeField] private float rotateSpeed = 30f;
     [SerializeField] private float gravityModifer = 0.95f;
-    [SerializeField] float maxViewAngle = 60f;
+    [SerializeField] float maxViewAngle = 40f;
 
     private CharacterController characterController;
 
@@ -59,9 +59,22 @@ public class PlayerController : MonoBehaviour
 
     private void Rotate()
     {
-        transform.rotation = Quaternion.Euler(transform.eulerAngles.x + (-input.RotateDirection.z),
-        transform.eulerAngles.y + input.RotateDirection.x,
-        transform.eulerAngles.z);
+        // Calculate the rotation angles based on input and rotation speed
+        float rotationX = -input.RotateDirection.z * rotateSpeed * Time.deltaTime;
+        float rotationY = input.RotateDirection.x * rotateSpeed * Time.deltaTime;
+
+        // Apply the rotation
+        transform.Rotate(rotationX, rotationY, 0f, Space.Self);
+
+        // Clamp the X rotation between -60 and 60 degrees
+        float currentRotationX = transform.localEulerAngles.x;
+        if (currentRotationX > 180f)
+            currentRotationX -= 360f;
+
+        float clampedRotationX = Mathf.Clamp(currentRotationX, -maxViewAngle, maxViewAngle);
+
+        // Apply the clamped rotation
+        transform.localRotation = Quaternion.Euler(clampedRotationX, transform.localEulerAngles.y, 0f);
     }
 }
 

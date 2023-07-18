@@ -251,9 +251,9 @@ MonoBehaviour:
   input: {fileID: 11400000, guid: 3cc47b8d878d6264686f647d9c31235b, type: 2}
   walkSpeed: 8
   runSpeed: 12
-  rotateSpeed: 30
+  rotateSpeed: 60
   gravityModifer: 0.95
-  maxViewAngle: 60
+  maxViewAngle: 40
 --- !u!1 &53717576
 GameObject:
   m_ObjectHideFlags: 0
