@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private Transform mainCamera;
 
 
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour
         movmentVector.Normalize();       // normal hiz 8 ise sag ust hiz 8.4 daha hizli onu esitledik hepsi 8
         movmentVector *= currentSpeed * Time.deltaTime;
 
-        characterController.Move(movmentVector);
+        characterController.Move(movmentVector+ heightMovement);
 
         if (characterController.isGrounded)
         {
@@ -61,24 +62,6 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x + (-input.RotateDirection.z),
         transform.eulerAngles.y + input.RotateDirection.x,
         transform.eulerAngles.z);
-
-
-        if (mainCamera != null)
-        {
-            if (mainCamera.eulerAngles.x > maxViewAngle && mainCamera.eulerAngles.x < 180f)
-            {
-                mainCamera.rotation = Quaternion.Euler(maxViewAngle, mainCamera.eulerAngles.y, mainCamera.eulerAngles.z);
-            }
-            else if (mainCamera.eulerAngles.x > 180f && mainCamera.eulerAngles.x < 360f - maxViewAngle)
-            {
-                mainCamera.rotation = Quaternion.Euler(360f - maxViewAngle, mainCamera.eulerAngles.y, mainCamera.eulerAngles.z);
-            }
-            else
-            {
-                mainCamera.rotation = Quaternion.Euler(mainCamera.rotation.eulerAngles +
-                      new Vector3(-input.RotateDirection.y, 0f, 0f));
-            }
-        }
     }
 }
 
