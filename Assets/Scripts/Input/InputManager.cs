@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private VariableJoystick moveJoystick;
-    [SerializeField] private VariableJoystick rotateJoystick;
+    [SerializeField] private FloatingJoystick rotateJoystick;
     [SerializeField] private InputData input;
 
     private void Update()

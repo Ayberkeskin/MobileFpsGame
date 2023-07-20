@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] InputData input;
     [Header("Player Control Settings")]
@@ -42,14 +42,14 @@ public class PlayerController : MonoBehaviour
         heightMovement.y -= gravityModifer * Time.deltaTime;
 
         //Baktigin yöne dogru gitmesi icin
-        Vector3 localVerticalVector = transform.forward * input.Vertical; 
+        Vector3 localVerticalVector = transform.forward * input.Vertical;
         Vector3 localHorizontalVector = transform.right * input.Horizontal;
         Vector3 movmentVector = localHorizontalVector + localVerticalVector;
 
         movmentVector.Normalize();       // normal hiz 8 ise sag ust hiz 8.4 daha hizli onu esitledik hepsi 8
         movmentVector *= currentSpeed * Time.deltaTime;
 
-        characterController.Move(movmentVector+ heightMovement);
+        characterController.Move(movmentVector + heightMovement);
 
         if (characterController.isGrounded)
         {
@@ -77,5 +77,3 @@ public class PlayerController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(clampedRotationX, transform.localEulerAngles.y, 0f);
     }
 }
-
-
