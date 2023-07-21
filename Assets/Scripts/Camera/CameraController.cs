@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-     private Transform target;
+     private Transform _target;
     private void Awake()
     {
-        target = GameObject.FindWithTag("CameraPoint").transform;
+        _target = GameObject.FindWithTag("CameraPoint").transform;
     }
 
 
     void Update()
     {
-        if (target != null)
+        if (_target != null)
         {
-            transform.position = target.position;
-            transform.rotation = target.rotation;
+            transform.position = _target.position;
+            transform.rotation = _target.rotation;
         }
 
     }

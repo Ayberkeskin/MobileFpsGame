@@ -2537,6 +2537,7 @@ GameObject:
   - component: {fileID: 1952306093}
   - component: {fileID: 1952306098}
   - component: {fileID: 1952306097}
+  - component: {fileID: 1952306099}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2639,7 +2640,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952306092}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -2681,6 +2682,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1952306099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952306092}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d82f5695421f042937530a5bb09528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 10
+  _turnSpeed: 10
+  _damage: 10
+  _attackRange: 10
+  _attackRate: 10
 --- !u!1 &2051278931
 GameObject:
   m_ObjectHideFlags: 0

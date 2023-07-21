@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3169941507241144396}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,11 +126,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 3cc47b8d878d6264686f647d9c31235b, type: 2}
-  walkSpeed: 8
-  runSpeed: 12
-  rotateSpeed: 140
-  gravityModifer: 0.95
-  maxViewAngle: 40
+  _walkSpeed: 8
+  _runSpeed: 12
+  _rotateSpeed: 30
+  _gravityModifer: 0.95
+  _maxViewAngle: 40
 --- !u!1 &3829070911975882964
 GameObject:
   m_ObjectHideFlags: 0
