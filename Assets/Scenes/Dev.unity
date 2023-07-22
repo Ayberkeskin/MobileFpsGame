@@ -2789,9 +2789,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3169941507241144396, guid: 6f4e20054827ee648ac20e4bb4dfb451,
         type: 3}
+      propertyPath: "_\u0131nputData"
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cc47b8d878d6264686f647d9c31235b,
+        type: 2}
+    - target: {fileID: 3169941507241144396, guid: 6f4e20054827ee648ac20e4bb4dfb451,
+        type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 11400000, guid: 275fe99c5e031e548af616e246f2c62a,
+        type: 2}
+    - target: {fileID: 3169941507241144396, guid: 6f4e20054827ee648ac20e4bb4dfb451,
+        type: 3}
       propertyPath: _rotateSpeed
       value: 130
       objectReference: {fileID: 0}
+    - target: {fileID: 3169941507241144396, guid: 6f4e20054827ee648ac20e4bb4dfb451,
+        type: 3}
+      propertyPath: _playerSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 275fe99c5e031e548af616e246f2c62a,
+        type: 2}
     - target: {fileID: 6444249347295059040, guid: 6f4e20054827ee648ac20e4bb4dfb451,
         type: 3}
       propertyPath: m_RootOrder
@@ -2993,6 +3011,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900875686392486252, guid: 7a99a653da70e8041affdca54b4c06aa,
+        type: 3}
+      propertyPath: _enemySettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 32884940dd319e848afeac0b5acc09db,
+        type: 2}
     - target: {fileID: 7851983760076683362, guid: 7a99a653da70e8041affdca54b4c06aa,
         type: 3}
       propertyPath: m_RootOrder

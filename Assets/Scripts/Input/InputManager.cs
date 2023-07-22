@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace MobileFpsGame.Input
+{
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private VariableJoystick moveJoystick;
@@ -31,4 +33,5 @@ public class InputManager : MonoBehaviour
         input.RotateDirection = new Vector3(input.RotateHorizontal, 0, input.RotateVertical);
         input.RotateHasInput = (input.RotateDirection.sqrMagnitude > 0f ? true : false);
     }
+}
 }
